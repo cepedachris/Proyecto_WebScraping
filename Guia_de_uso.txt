@@ -1,0 +1,38 @@
+Requisitos previos
+	Instalar Python y Git (https://www.python.org/downloads/)
+	Descargar el repositorio del proyecto desde GitHub (https://github.com/cepedachris/Proyecto_WebScraping  -> Boton Code > Clone > HTTPS > Copy url to clipboard.)
+
+Configuración del proyecto
+	Abrir cmd (WIN + R > CMD). (cd [la ruta donde vas a guardar el proyecto.])
+	Abrir el proyecto con Visual Studio Code
+	Duplicar el archivo config_example.ini y modificar las variables con tus datos, luego renombrarlo a config.ini
+	images_path es la ruta donde se guardarán las imágenes de los productos, coloca un "\" al final de la ruta
+	Descargar el ChromeDriver y colocarlo en la raíz de tu usuario. (https://chromedriver.storage.googleapis.com/index.html)
+
+Configuración del entorno virtual
+	Abrir la línea de comandos (cmd) y navegar a la ruta del proyecto. (cd [ruta del proyecto])
+	Crear un entorno virtual:
+	python -m venv env
+	env\Scripts\activate
+	Instalar las dependencias:
+	pip install -r requirements.txt
+	Crear la base de datos:
+	python create_database.py
+
+Agregar productos a la base de datos
+	Utilizar un gestor de base de datos (GBD) para agregar los elementos que vas a vender
+	Usar el archivo insert posts.sql como guía y los parámetros del archivo marketplace_options.json
+	En el campo path de la tabla articles.db, insertar el nombre de la carpeta del producto que vas a vender
+
+Publicar en Facebook Marketplace
+	En la línea de comandos, ejecutar:
+	python app.py
+	Para borrar publicaciones, ejecutar:
+	python delete.py
+
+¡Eso es todo! Disfruta utilizando el proyecto de WebScraping en Facebook Marketplace.
+
+Owners: Chris Cepeda, Mocerrath Bonilla.
+
+
+Agradecimientos al desarrollador del proyecto original eselejuanito.
